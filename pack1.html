@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OERAVol1</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .exhibition {
+            position: absolute;  
+            top: 100px;
+            height: fit-content;
+            border-radius: 8px;
+            width: 94%;
+            padding-left: 2%;
+            margin-top: 100px;
+        }
+        
+        .mask {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 42px;
+            bottom: 0;
+            background-color: rgba(83, 83, 83, 0.68);
+            z-index: -1;
+        }
+        #title {
+            color: #f5fb38;
+            font-family: 'Earth';
+            font-size: xx-large;
+            text-decoration: none;
+        }
+        .container {
+            margin-top: 5%;
+            display: flex;
+            padding: 20px;
+        }
+
+        .cover {
+            border-radius: 2px;
+            width: 20%; /* 封面图片宽度 */
+            margin-right: 7%; /* 与名称的间距 */
+            margin-left: 10%;
+        }
+
+        .details {
+            flex-grow: 1; /* 使名称和描述区域占据剩余空间 */
+        }
+
+        .download-button {
+            background-color: #3c6cc4; /* 按钮颜色 */
+            width: 280px;
+            height: 100px;
+            color: aliceblue;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            font-size: large;
+            margin-left: 20px; /* 与描述区域的间距 */
+        }
+
+        .preview {
+            margin-top: 20px;
+        }
+
+        .audio-player {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center align items */
+            width: 20%; /* Adjust width as needed */
+            margin: 5%; /* 增加间距以美化布局 */
+            color: white;
+        }
+
+        .play-button {
+            background-color: #bebebe85; /* Button color */
+            color: white;
+            padding: 10px 20px; /* Button padding */
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            font-size: large;
+            margin: 5px 0; /* Margin around button */
+            transition: background-color 0.3s; /* Transition effect */
+        }
+
+        .play-button:hover {
+            background-color: #f5fb38; /* Change color on hover */
+        }
+
+        .progress-bar {
+            width: 100%; /* Full width */
+            margin-top: 5px; /* Space above the progress bar */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏（自行复制） -->
+    <div class="navigation">
+        <a href="index.html" class="nav_home">Home</a>
+        <a href="oera_music.html" class="nav_music">Music</a>
+        <div class="nav_home" style="background-color: #f5fb38; color: black;font-family: 'Earth';height: 60px;">
+            <span style="position: relative;top: 50%;">Sample Packs</span>
+        </div>
+        <a href="oera_project.html" class="nav_project">Project Files</a>
+        <a href="oera_tutorial.html" class="nav_tutorial">Tutorials</a>
+        <a href="oera_stream.html" class="nav_stream">Live Streams</a>
+        <a href="oera_forum.html" class="nav_forum">Forum</a>
+        <form action="" class="nav_search bar" style="position: relative; left: 50px;">
+            <input type="text">
+        </form>
+        <div class="nav_account" style="position: relative; bottom: 50px; right: 150px;">My Account</div>
+    </div>
+
+    <div class="exhibition">
+        <h1 id="title" style="position: relative; right: 18px;">Sample Packs</h1>
+        <div class="container" style="display: flex; align-items: flex-start; padding: 20px;">
+            <img src="./SamplePacks/OERAVol1/Logo_ 采样包封面@10x.png" alt="Sample Pack Cover" class="cover">
+            <div class="details" style="flex-grow: 1; position: relative;">
+                <h1 style="font-family: Eurostile; color: aliceblue;margin-top: 0;">OERA Mini Pack Vol.1</h1> <!-- 采样包名称 -->
+                
+                <p style="max-width: 45%; word-wrap: break-word; color: white; font-size: x-large;margin-top: 5%;">
+                    OERA Mini Pack Vol.1 is a compact sample pack created by OERA. It features a selection of bass samples and drum loops, 
+                    specifically designed for Dubstep music. This pack is perfect for helping you quickly establish inspiration and elevate your productions.
+                </p> <!-- 详细描述 -->
+                
+                <button class="download-button" onclick="window.location.href='./SamplePacks/OERAVol1/OERA Mini Pack Vol.1.zip';" style="position: absolute; top: 100px; right: 20%;font-size: x-large;">Free Download</button> <!-- 下载按钮 -->
+            </div>
+        </div>
+
+        <div class="preview" style="display: flex; justify-content: center; flex-wrap: wrap;">
+            <div class="audio-player">
+                <audio id="audio1" src="./SamplePacks/OERAVol1/OERA_Drum Loop_01_100.wav" preload="auto"></audio>
+                <button class="play-button" id="button1" onclick="toggleAudio('audio1', 'button1')">Exsample1</button>
+                <input type="range" class="progress-bar" id="progress1" value="0" step="1" onchange="setAudioProgress('audio1', this.value)">
+            </div>
+            <div class="audio-player">
+                <audio id="audio2" src="./SamplePacks/OERAVol1/OERA_FM Pluck_01_E.wav" preload="auto"></audio>
+                <button class="play-button" id="button2" onclick="toggleAudio('audio2', 'button2')">Exsample2</button>
+                <input type="range" class="progress-bar" id="progress2" value="0" step="1" onchange="setAudioProgress('audio2', this.value)">
+            </div>
+            <div class="audio-player">
+                <audio id="audio3" src="./SamplePacks/OERAVol1/OERA_Neuro Bite_01_E.wav" preload="auto"></audio>
+                <button class="play-button" id="button3" onclick="toggleAudio('audio3', 'button3')">Exsample3</button>
+                <input type="range" class="progress-bar" id="progress3" value="0" step="1" onchange="setAudioProgress('audio3', this.value)">
+            </div>
+        </div>
+        <div class="mask"></div>
+    </div>
+    <div class="background">
+        <img src="Logo.png" alt="Logo" style="height: 60%;margin-top: 15%;">
+    </div>
+
+    <script>
+        let currentAudio = null; // 记录当前播放的音频
+
+        function playAudio(audioId) {
+            if (currentAudio) {
+                document.getElementById(currentAudio).pause(); // 暂停当前播放的音频
+            }
+            const audio = document.getElementById(audioId);
+            audio.play();
+            currentAudio = audioId; // 更新当前播放的音频
+        }
+
+        function setAudioProgress(audioId, value) {
+            const audio = document.getElementById(audioId);
+            audio.currentTime = (audio.duration * value) / 100; // Set audio current time based on the progress
+        }
+
+        // Update progress bar as audio plays
+        function updateProgressBar(audioId, progressBarId) {
+            const audio = document.getElementById(audioId);
+            const progressBar = document.getElementById(progressBarId);
+            audio.addEventListener('timeupdate', () => {
+                const value = (audio.currentTime / audio.duration) * 100; // Calculate percentage
+                progressBar.value = value; // Update the progress bar
+            });
+        }
+
+        // Call the update function for each audio player
+        updateProgressBar('audio1', 'progress1');
+        updateProgressBar('audio2', 'progress2');
+        updateProgressBar('audio3', 'progress3');
+
+        function toggleAudio(audioId, buttonId) {
+            const audio = document.getElementById(audioId);
+            const button = document.getElementById(buttonId);
+            
+            if (audio.paused) {
+                if (currentAudio && currentAudio !== audioId) {
+                    document.getElementById(currentAudio).pause(); // 暂停当前播放的音频
+                    document.getElementById(currentAudio.replace('audio', 'button')).innerText = 'Play'; // 更新按钮文本
+                }
+                audio.play();
+                currentAudio = audioId; // 更新当前播放的音频
+                button.innerText = 'Pause'; // 更新按钮文本
+            } else {
+                audio.pause();
+                button.innerText = 'Play'; // 更新按钮文本
+            }
+        }
+    </script>
+</body>
+</html>

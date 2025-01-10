@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oera_home</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        .navigation {
+            height: 100px;
+            width: 100%;
+            background-color: black;
+            position: fixed;
+            top: 0;
+            display: flex; /* 使用 flex 布局 */
+            justify-content: space-around; /* 子元素水平空间均分 */
+            align-items: flex-end; /* 子元素垂直底部 */
+            z-index: 1;
+        }
+
+        /* 定义 nav_ 开头类的公共样式 */
+        [class^="nav_"] {
+            color: white; /* 字体颜色为白色 */
+            padding: 30px; /* 内边距 */
+            padding-bottom: 10px;
+            text-align: center; /* 文字居中 */
+            cursor: pointer; /* 鼠标悬停样式 */
+            float: left;
+            /* margin-left: 40px; */
+        }
+        
+        [class^="nav_"]:hover {
+            color: rgb(255, 255, 255);
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color:#232323;
+            z-index: -2;
+        }
+
+        .mask {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 42px;
+            bottom: 0;
+            background-color: rgba(83, 83, 83, 0.68);
+            z-index: -1;
+        }
+        .exhibition{
+            position: absolute;  
+            top: 400px;
+            height: fit-content;
+            border-radius: 8px;
+            width: 100%;
+            
+            /* margin-left: 60px; */
+            bottom: 0%;
+            margin-top: 100px; /* Offset for the fixed navbar */
+            /* padding: 20px; */
+            width: 94%;
+            padding-left: 2%;
+            /* background-color: #f5666621; */
+        }
+
+        .music_preview {
+            position: relative;
+            height: 200px;
+            width: 200px;
+            float: left;
+            margin-left: 40px;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .music_preview img {
+            width: 100%;
+            height: 100%;
+            
+            transition: opacity 0.5s ease;
+        }
+
+        .music_preview .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.5); /* 蒙层颜色 */
+            opacity: 0.9;
+            transition: opacity 0.2s ease;
+        }
+
+        .music_preview:hover .overlay {
+            opacity: 0; /* 悬停时渐隐 */
+        }
+        .news_content {
+        position: relative;
+        display: block;
+        text-decoration: none;
+        }
+
+        .news_content .news_overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(66, 66, 66, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+
+        .news_content:hover .news_overlay {
+            opacity: 1;
+        }
+
+        .news_content .news_text {
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            padding: 20px;
+            line-height: 1.5;
+            font-family: 'Eurostile';
+        }
+
+        [class^="exhi_"] {
+            height: 300px;
+            
+            /* background-color: rgba(127, 255, 212, 0.37); */
+            margin-top: 80px;
+            position: relative;
+            right: 18px;
+        }
+
+        #title{
+            color: #f5fb38;
+            font-family: 'Earth';
+            font-size: xx-large;
+            text-decoration: none;
+        }
+        #previewbox{
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-around;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation">
+        <div class="nav_home" style="background-color: #f5fb38; color: black;font-family: 'Earth';height: 60px;">
+            <span style="position: relative;top: 50%;">Home</span>
+        </div>
+        <a href="oera_music.html" class="nav_music">Music</a>
+        <a href="oera_sample.html" class="nav_sample">Sample Packs</a>
+        <a href="oera_project.html" class="nav_project">Project Files</a>
+        <a href="oera_tutorial.html" class="nav_tutorial">Tutorials</a>
+        <a href="oera_stream.html" class="nav_stream">Live Streams</a>
+        <a href="oera_forum.html" class="nav_forum">Forum</a>
+        <form action="" class="nav_search bar" style="position: relative; left: 50px;">
+            <input type="text">
+        </form>
+        <div class="nav_account" style="position: relative; bottom: 50px; right: 150px;">My Account</div>
+    </div>
+    
+    
+
+    </div>
+    <div class="exhibition">
+        <div class="exhi_intro" style="margin-top: 0%;height: 340px;">
+            <h1 id="title">Hello</h1>
+            <p style="color: white;font-size: xx-large;width: 90%;padding-left: 5%;line-height: 1.5;padding-top: 1.5%;">This is OERA, a digital musician from bedroom. I've been creating electronic music for many years, and I especially enjoy working on sound design. I have decided to create a personal website to share my music, resources, and experiences. I also hope to build a platform where producers can communicate and discuss with each other. </p>
+            <p style="color: white;font-size: xx-large;width: 90%;padding-left: 5%;line-height: 1.5;">Thank you for supporting me! Enjoy!</p>    
+            
+        </div>
+        <div class="exhi_news" style="height: 400px;">
+            <h1 id="title">News</h1>
+            <div id="previewbox">
+                <a href="news1.html" class="news_content" style="height: 300px;width: 440px;background-color: aliceblue;float: left;margin-left: 40px; overflow: hidden;">
+                    <img src="./Album Cover/NIHIL2.jpg" alt="News Image 1" style="width: 100%; height: auto; object-fit: cover;">
+                    <div class="news_overlay">
+                        <div class="news_text">New song 'Derelict Heart' has been released on YT Records!</div>
+                    </div>
+                </a>
+                <a href="news2.html" class="news_content" style="height: 300px;width: 440px;background-color: aliceblue;float: left;margin-left: 40px; overflow: hidden;">
+                    <img src="./Album Cover/3c4741fcbac08701de35bb368d86f6c.png" alt="News Image 2" style="width: 110%; height: auto; object-fit: cover;position: relative;right: 4%;">
+                    <div class="news_overlay">
+                        <div class="news_text">Science Popolarization Interactive Art Installation - Gravicam</div>
+                    </div>
+                </a>
+                <a href="pack1.html" class="news_content" style="height: 300px;width: 440px;background-color: aliceblue;float: left;margin-left: 40px; overflow: hidden;">
+                    <img src="./SamplePacks/OERAVol1/Logo_ 采样包封面@10x.png" alt="News Image 3" style="width: 100%; height: auto; object-fit: cover;position: relative;bottom: 112%;">
+                    <div class="news_overlay">
+                        <div class="news_text">New Sample Pack Released!</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="exhi_music">
+            <a href="oera_music.html" id="title">Music</a>
+            <div id="previewbox">
+                <div class="music_preview" onclick="location.href='oera_music.html#audio1';" style="background-image: url('./Album Cover/Hiraeth.png');">
+                    <img src="./Album Cover/Hiraeth.png" alt="Album Cover 1">
+                    <div class="overlay" style="background-color: #F1F1F1"></div> <!-- 修改颜色 -->
+                </div>
+                <div class="music_preview" onclick="location.href='oera_music.html#audio2';" style="background-image: url('./Album Cover/Hiraeth.png');">
+                    <img src="./Album Cover/Hiraeth.png" alt="Album Cover 2">
+                    <div class="overlay" style="background-color: #B0B0B0;"></div> <!-- 修改颜色 -->
+                </div>
+                <div class="music_preview" onclick="location.href='oera_music.html#audio3';" style="background-image: url('./Album Cover/Hiraeth.png');">
+                    <img src="./Album Cover/Hiraeth.png" alt="Album Cover 3">
+                    <div class="overlay" style="background-color: #666666;"></div> <!-- 修改颜色 -->
+                </div>
+                <div class="music_preview" onclick="location.href='oera_music.html#audio4';" style="background-image: url('./Album Cover/NIHIL2.jpg');">
+                    <img src="./Album Cover/NIHIL2.jpg" alt="Album Cover 4">
+                    <div class="overlay" style="background-color: #484848;"></div> <!-- 修改颜色 -->
+                </div>
+                <div class="music_preview" onclick="location.href='oera_music.html#audio5';" style="background-image: url('./Album Cover/Hiraeth.png');">
+                    <img src="./Album Cover/Hiraeth.png" alt="Album Cover 5">
+                    <div class="overlay" style="background-color: #343434;"></div> <!-- 修改颜色 -->
+                </div>
+                <div class="music_preview" onclick="location.href='oera_music.html#audio6';" style="background-image: url('./Album Cover/Cosmos.png');">
+                    <img src="./Album Cover/Cosmos.png" alt="Album Cover 6">
+                    <div class="overlay" style="background-color: #222222;"></div> <!-- 修改颜色 -->
+                </div>
+            </div>
+        </div>
+        <div class="exhi_sample">
+            <a href="oera_sample.html" id="title">Sample Packs</a>
+            <div id="previewbox">
+                <div class="music_preview" onclick="location.href='pack1.html';" style="background-image: url('./SamplePacks/OERAVol1/Logo_采样包封面@10x.png')">
+                    <img src="./SamplePacks/OERAVol1/Logo_ 采样包封面@10x.png" alt="Album Cover 1" style="object-fit: cover;position: relative;width: 150%;right: 25%;">
+                    <div class="overlay" style="background-color: #F1F1F1;"></div> <!-- 修改颜色 -->
+                </div>
+                <div class="music_preview" onclick="location.href='pack1.html';" style="background-image: url('./SamplePacks/OERAVol1/Logo_采样包封面@10x.png')">
+                    <img src="./SamplePacks/OERAVol1/How to find time to write when you work 10 hours a day, 7 out of 7, got health issues, no car and….jpg" alt="Album Cover 1" style="object-fit: cover;">
+                    <div class="overlay" style="background-color: #B0B0B0;"></div> <!-- 修改颜色 -->
+                </div>
+                <div class="music_preview" onclick="location.href='pack1.html';" style="background-image: url('./SamplePacks/OERAVol1/Logo_采样包封面@10x.png')">
+                    <img src="./SamplePacks/OERAVol1/Maalavidaa S1 → Digital Art - Alycia Rainaud.jpg" alt="Album Cover 1" style="object-fit: cover;">
+                    <div class="overlay" style="background-color: #666666;"></div> <!-- 修改颜色 -->
+                </div>
+                <div class="music_preview" onclick="location.href='pack1.html';" style="background-image: url('./SamplePacks/OERAVol1/Logo_采样包封面@10x.png')">
+                    <img src="./SamplePacks/OERAVol1/Patterns Photograph by Austin Miller, Black & White on Paper, 10 x 15 in - Fine Art Original Artwork For Sale on Saatchi Art_.jpg" alt="Album Cover 1" style="object-fit: cover;">
+                    <div class="overlay" style="background-color: #484848;"></div> <!-- 修改颜色 -->
+                </div>
+                <div class="music_preview" onclick="location.href='pack1.html';" style="background-image: url('./SamplePacks/OERAVol1/Logo_采样包封面@10x.png')">
+                    <img src="./SamplePacks/OERAVol1/Pouring Acrylic.jpg" alt="Album Cover 1" style="object-fit: cover;">
+                    <div class="overlay" style="background-color: #343434;"></div> <!-- 修改颜色 -->
+                </div>
+                <div class="music_preview" onclick="location.href='pack1.html';" style="background-image: url('./SamplePacks/OERAVol1/Logo_采样包封面@10x.png')">
+                    <img src="./SamplePacks/OERAVol1/Vintage gray background stock illustration_ Illustration of gray - 14532077 (1).jpg" alt="Album Cover 1" style="object-fit: cover;">
+                    <div class="overlay" style="background-color: #222222;"></div> <!-- 修改颜色 -->
+                </div>
+            </div>
+
+        </div>
+        <div class="exhi_project">
+            <a href="oera_project.html" id="title">Project Files</a>
+            <div id="previewbox">
+                <div class="music_preview" onclick="location.href='Glens_project.html';" style="background-image: url('./Projectfiles/Glens/下载 (11).jpg')">
+                    <img src="./Projectfiles/Glens/下载 (11).jpg" alt="Album Cover 1" style="object-fit: cover;">
+                    <div class="overlay" style="background-color: #F1F1F1;"></div> <!-- 修改颜色 -->
+                </div>
+                <div class="music_preview" onclick="location.href='Glens_project.html';" style="background-image: url('./Projectfiles/Glens/下载 (11).jpg')">
+                    <img src="./Projectfiles/Glens/下载 (9).jpg" alt="Album Cover 1" style="object-fit: cover;">
+                    <div class="overlay" style="background-color: #B0B0B0;"></div> <!-- 修改颜色 -->
+                </div>
+                <div class="music_preview" onclick="location.href='Glens_project.html';" style="background-image: url('./Projectfiles/Glens/下载 (11).jpg')">
+                    <img src="./Projectfiles/Glens/下载 (8).jpg" alt="Album Cover 1" style="object-fit: cover;">
+                    <div class="overlay" style="background-color: #666666;"></div> <!-- 修改颜色 -->
+                </div>
+                <div class="music_preview" onclick="location.href='Glens_project.html';" style="background-image: url('./Projectfiles/Glens/下载 (11).jpg')">
+                    <img src="./Projectfiles/Glens/下载 (12).jpg" alt="Album Cover 1" style="object-fit: cover;">
+                    <div class="overlay" style="background-color: #484848;"></div> <!-- 修改颜色 -->
+                </div>
+                <div class="music_preview" onclick="location.href='Glens_project.html';" style="background-image: url('./Projectfiles/Glens/下载 (11).jpg')">
+                    <img src="./Projectfiles/Glens/下载 (13).jpg" alt="Album Cover 1" style="object-fit: cover;">
+                    <div class="overlay" style="background-color: #343434;"></div> <!-- 修改颜色 -->
+                </div>
+                <div class="music_preview" onclick="location.href='Glens_project.html';" style="background-image: url('./Projectfiles/Glens/下载 (11).jpg')">
+                    <img src="./Projectfiles/Glens/下载 (14).jpg" alt="Album Cover 1" style="object-fit: cover;">
+                    <div class="overlay" style="background-color: #222222;"></div> <!-- 修改颜色 -->
+                </div>
+            </div>
+
+        </div>
+        <div class="exhi_tutorial">
+            <a href="oera_tutorial.html" id="title">Tutorials</a>
+            <div id="previewbox">
+                <div class="music_preview" onclick="location.href='tutorial1.html';" style="background-image: url('./Projectfiles/Glens/下载 (11).jpg')">
+                    <img src="./Tutorials/tutorial1/[声设分享]Sample Everything！如何将一不小心录进的风噪做成质感十足的Bass！.jpg" alt="Album Cover 1" style="object-fit: cover;">
+                    <div class="overlay" style="background-color: #F1F1F1;"></div> <!-- 修改颜色 -->
+                </div>
+                <div class="music_preview" onclick="location.href='tutorial2.html';" style="background-image: url('./Projectfiles/Glens/下载 (11).jpg')">
+                    <img src="./Tutorials/tutorial1/[声设分享]用Operator做一个属于你自己的超酷Growl Bass！.jpg" alt="Album Cover 1" style="object-fit: cover;">
+                    <div class="overlay" style="background-color: #B0B0B0;"></div> <!-- 修改颜色 -->
+                </div>
+                <div class="music_preview" onclick="location.href='tutorial3.html';" style="background-image: url('./Projectfiles/Glens/下载 (11).jpg')">
+                    <img src="./Tutorials/tutorial1/[声设分享]一个视频让你离Au5更近一步！用免费合成器Vital制作Trancestep中标志性的Phaser Bass！.jpg" alt="Album Cover 1" style="object-fit: cover;">
+                    <div class="overlay" style="background-color: #666666;"></div> <!-- 修改颜色 -->
+                </div>
+                <div class="music_preview" onclick="location.href='tutorial1.html';" style="background-image: url('./Projectfiles/Glens/下载 (11).jpg')">
+                    <img src="./Tutorials/tutorial1/下载 (16).jpg" alt="Album Cover 1" style="object-fit: cover;">
+                    <div class="overlay" style="background-color: #484848;"></div> <!-- 修改颜色 -->
+                </div>
+                <div class="music_preview" onclick="location.href='tutorial2.html';" style="background-image: url('./Projectfiles/Glens/下载 (11).jpg')">
+                    <img src="./Tutorials/tutorial1/下载 (16).jpg" alt="Album Cover 1" style="object-fit: cover;">
+                    <div class="overlay" style="background-color: #343434;"></div> <!-- 修改颜色 -->
+                </div>
+                <div class="music_preview" onclick="location.href='tutorial3.html';" style="background-image: url('./Projectfiles/Glens/下载 (11).jpg')">
+                    <img src="./Tutorials/tutorial1/下载 (16).jpg" alt="Album Cover 1" style="object-fit: cover;">
+                    <div class="overlay" style="background-color: #222222;"></div> <!-- 修改颜色 -->
+                </div>
+            </div>
+
+        </div>
+        <div class="exhi_stream">
+            <a href="oera_stream.html" id="title">Live Streams</a>
+            <div id="previewbox">
+                <div class="music_preview" onclick="location.href='livestream1.html';" style="background-image: url('./Projectfiles/Glens/下载 (11).jpg')">
+                    <img src="./Tutorials/tutorial1/[千粉特辑]Derelict Heart工程讲解.jpg" alt="Album Cover 1" style="object-fit: cover;">
+                    <div class="overlay" style="background-color: #F1F1F1;"></div> <!-- 修改颜色 -->
+                </div>
+                <div class="music_preview" onclick="location.href='livestream1.html';" style="background-image: url('./Projectfiles/Glens/下载 (11).jpg')">
+                    <img src="./Tutorials/tutorial1/下载 (16).jpg" alt="Album Cover 1" style="object-fit: cover;">
+                    <div class="overlay" style="background-color: #B0B0B0;"></div> <!-- 修改颜色 -->
+                </div>
+                <div class="music_preview" onclick="location.href='livestream1.html';" style="background-image: url('./Projectfiles/Glens/下载 (11).jpg')">
+                    <img src="./Tutorials/tutorial1/下载 (16).jpg" alt="Album Cover 1" style="object-fit: cover;">
+                    <div class="overlay" style="background-color: #666666;"></div> <!-- 修改颜色 -->
+                </div>
+                <div class="music_preview" onclick="location.href='livestream1.html';" style="background-image: url('./Projectfiles/Glens/下载 (11).jpg')">
+                    <img src="./Tutorials/tutorial1/下载 (16).jpg" alt="Album Cover 1" style="object-fit: cover;">
+                    <div class="overlay" style="background-color: #484848;"></div> <!-- 修改颜色 -->
+                </div>
+                <div class="music_preview" onclick="location.href='livestream1.html';" style="background-image: url('./Projectfiles/Glens/下载 (11).jpg')">
+                    <img src="./Tutorials/tutorial1/下载 (16).jpg" alt="Album Cover 1" style="object-fit: cover;">
+                    <div class="overlay" style="background-color: #343434;"></div> <!-- 修改颜色 -->
+                </div>
+                <div class="music_preview" onclick="location.href='livestream1.html';" style="background-image: url('./Projectfiles/Glens/下载 (11).jpg')">
+                    <img src="./Tutorials/tutorial1/下载 (16).jpg" alt="Album Cover 1" style="object-fit: cover;">
+                    <div class="overlay" style="background-color: #222222;"></div> <!-- 修改颜色 -->
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mask"></div>
+
+    </div>
+    <div class="background">
+        <img src="Logo.png" alt="Logo" style="height: 60%;margin-top: 15%;">
+    </div>
+</body>
+</html>

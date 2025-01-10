@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oera_forum</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .exhibition {
+            position: absolute;  
+            top: 100px;
+            height: fit-content;
+            border-radius: 8px;
+            width: 94%;
+            padding-left: 2%;
+            margin-top: 100px;
+        }
+        
+        .mask {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 42px;
+            bottom: 0;
+            background-color: rgba(83, 83, 83, 0.68);
+            z-index: -1;
+        }
+        #title {
+            color: #f5fb38;
+            font-family: 'Earth';
+            font-size: xx-large;
+            text-decoration: none;
+        }
+
+        .news-container {
+            width: 80%;
+            margin: 50px auto;
+            padding: 30px;
+            color: white;
+        }
+
+        .news-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .news-text {
+            font-size: 30px;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+
+        .news-link {
+            color: #f5fb38;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .news-link:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation">
+        <div class="nav_home" style="background-color: #f5fb38; color: black;font-family: 'Earth';height: 60px;">
+            <span style="position: relative;top: 50%;">Home</span>
+        </div>
+        <a href="oera_music.html" class="nav_music">Music</a>
+        <a href="oera_sample.html" class="nav_sample">Sample Packs</a>
+        <a href="oera_project.html" class="nav_project">Project Files</a>
+        <a href="oera_tutorial.html" class="nav_tutorial">Tutorials</a>
+        <a href="oera_stream.html" class="nav_stream">Live Streams</a>
+        <a href="oera_forum.html" class="nav_forum">Forum</a>
+        <form action="" class="nav_search bar" style="position: relative; left: 50px;">
+            <input type="text">
+        </form>
+        <div class="nav_account" style="position: relative; bottom: 50px; right: 150px;">My Account</div>
+    </div>
+    <div class="exhibition">
+        <h1 id="title" style="position: relative; right: 18px;">News</h1>
+        <div class="news-container">
+            <img src="./Album Cover/3c4741fcbac08701de35bb368d86f6c.png" alt="image" style="width: 80%;border-radius: 4px;display: block;margin-left: auto;margin-right: auto;">
+            
+            <div class="news-text" style="margin-top: 100px;">
+                <p>
+                    Gravicam is an interactive installation for two players that uses artistic and gamified cross-media forms to explain the imaging principle of "gravitational lensing." In this setup, one player, representing stellar object X126, can change the angle and adjust the mass of the "lensing object" to send light signals. Meanwhile, the other player, acting as an observer, captures the artistic transformation of the X126 player's face under the influence of the gravitational lens.
+                </p>
+                <img src="./Projectfiles/Glens//DSC_5135.jpg" alt="" style="width: 80%;border-radius: 4px;display: block;margin-left: auto;margin-right: auto;">
+                <p>
+                    Initially, we introduced the astronomical concept of gravitational lensing but were uncertain about how to create a complete installation that combines both artistic and educational purposes. After brainstorming and intense discussions among team members, we decided to build a physical "photo-op" installation centered on the imaging principle and effects of gravitational lensing. Visitors can learn about this scientific phenomenon and see what their faces look like when distorted by the gravitational lens.
+                </p>
+                <p>
+                    Once we finalized our concept, we began designing each component of the installation and developed the narrative for the entire interactive experience. To minimize costs, we constructed the outer framework using wooden boards, aluminum tubes, and custom-modeled 3D-printed connectors. We assembled the inner part, the "lensing object," using gardening spherical frames, LEGO structures, and acrylic panels. We then adorned the installation with colorful LED strips and gilded aluminum foil, achieving a distinctly industrial appearance. For the software, we used Arduino, Unity, and Touch Designer to integrate the physical installation with the game interface across different media.
+                </p>
+                <p>
+                    Players assume the role of stellar object X126, located 9 billion light-years away, using the gravitational lensing phenomenon to become observable from the Rees Observatory on Earth. During the experience, players can choose from three different angles, each corresponding to a type of gravitational lensing image: an Einstein ring, a cross, and a cosmic ring. While the player makes their selection, other visitors on the opposite side of the installation act as observers from the Rees Observatory, viewing real-time effects of the gravitational lens on the X126 player's face. Players can then manipulate a joystick to alter the mass of the "lensing object," reflected by the expansion of the central spherical device; the greater the mass, the more it expands and lights up. On-screen, players witness how different masses of the "lensing object" distort surrounding light. In gravitational lensing, the heavier the "lensing object," the more it warps spacetime, resulting in more pronounced bending of light and a clearer lensing effect. Once the player has completed their choices, lights "flow" from the X126 side to the Rees Observatory, indicating that light from the X126 object has reached Earth through gravitational lensing. The observer's screen then generates a report based on the choices and facial capture of the X126 player.
+                </p>
+                <a href="https://www.bilibili.com/video/BV1Bu6aYtEvp/?spm_id_from=333.999.0.0&vd_source=ecabfceeada3bf87d26cc5d35e42c651" class="news-link">Click here to watch the trailer!</a>
+            </div>
+            <img src="./Projectfiles/Glens/DSC_5071.jpg" alt="Derelict Heart Album Cover" class="news-image" style="border-radius: 4px;display: block;margin-left: auto;margin-right: auto;margin-top: 100px;">
+        </div>
+
+        <div class="mask"></div>
+    </div>
+
+    <div class="background">
+        <img src="Logo.png" alt="Logo" style="height: 60%;margin-top: 15%;">
+    </div>
+</body>
+</html>

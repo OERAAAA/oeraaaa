@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oera_forum</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .exhibition {
+            position: absolute;  
+            top: 100px;
+            height: fit-content;
+            border-radius: 8px;
+            width: 94%;
+            padding-left: 2%;
+            margin-top: 100px;
+        }
+        
+        .mask {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 42px;
+            bottom: 0;
+            background-color: rgba(83, 83, 83, 0.68);
+            z-index: -1;
+        }
+        #title {
+            color: #f5fb38;
+            font-family: 'Earth';
+            font-size: xx-large;
+            text-decoration: none;
+        }
+
+        .news-container {
+            width: 80%;
+            margin: 50px auto;
+            padding: 30px;
+            color: white;
+        }
+
+        .news-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .news-text {
+            font-size: 30px;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+
+        .news-link {
+            color: #f5fb38;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .news-link:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation">
+        <div class="nav_home" style="background-color: #f5fb38; color: black;font-family: 'Earth';height: 60px;">
+            <span style="position: relative;top: 50%;">Home</span>
+        </div>
+        <a href="oera_music.html" class="nav_music">Music</a>
+        <a href="oera_sample.html" class="nav_sample">Sample Packs</a>
+        <a href="oera_project.html" class="nav_project">Project Files</a>
+        <a href="oera_tutorial.html" class="nav_tutorial">Tutorials</a>
+        <a href="oera_stream.html" class="nav_stream">Live Streams</a>
+        <a href="oera_forum.html" class="nav_forum">Forum</a>
+        <form action="" class="nav_search bar" style="position: relative; left: 50px;">
+            <input type="text">
+        </form>
+        <div class="nav_account" style="position: relative; bottom: 50px; right: 150px;">My Account</div>
+    </div>
+    <div class="exhibition">
+        <h1 id="title" style="position: relative; right: 18px;">News</h1>
+        <div class="news-container">
+            <img src="./Album Cover/c31dd86c111bd64395417f16e65a9ae3.png" alt="image" style="width: 80%;border-radius: 4px;display: block;margin-left: auto;margin-right: auto;">
+            
+            <div class="news-text" style="margin-top: 100px;">
+                The NIHIL series of albums is intended to explore nihilism through sound design and experimental music. NIHIL Vol.2, the second album in this series, 
+                continues the concept and style of the series and is a collaborative creation by artists from China. Each artist interprets the deconstruction of nihilism with their own unique sound. 
+                My single, “Derelict Heart,” is also featured on this album. NIHIL Vol.2 was released on all platforms on December 25, 2024.
+                <a href="https://music.163.com/album?id=257679841&uct2=U2FsdGVkX18NusOYwnihEss2BdLy/rBc64lFtKSzn3M=" class="news-link">Click here to listen!</a>
+            </div>
+            <img src="./Album Cover/NIHIL2.jpg" alt="Derelict Heart Album Cover" class="news-image" style="border-radius: 4px;display: block;margin-left: auto;margin-right: auto;margin-top: 100px;">
+        </div>
+
+        <div class="mask"></div>
+    </div>
+
+    <div class="background">
+        <img src="Logo.png" alt="Logo" style="height: 60%;margin-top: 15%;">
+    </div>
+</body>
+</html>

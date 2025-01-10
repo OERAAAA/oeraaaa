@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oera_music</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .exhibition {
+            position: absolute;  
+            top: 400px;
+            height: fit-content;
+            border-radius: 8px;
+            width: 94%;
+            padding-left: 2%;
+            margin-top: 100px; /* Offset for the fixed navbar */
+        }
+        
+        .mask {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 42px;
+            bottom: 0;
+            background-color: rgba(83, 83, 83, 0.68);
+            z-index: -1;
+        }
+        #title {
+            color: #f5fb38;
+            font-family: 'Earth';
+            font-size: xx-large;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation">
+        <a href="index.html" class="nav_home">Home</a>
+        <div class="nav_home" style="background-color: #f5fb38; color: black;font-family: 'Earth';height: 60px;">
+            <span style="position: relative;top: 50%;">Music</span>
+        </div>
+        <a href="oera_sample.html" class="nav_sample">Sample Packs</a>
+        <a href="oera_project.html" class="nav_project">Project Files</a>
+        <a href="oera_tutorial.html" class="nav_tutorial">Tutorials</a>
+        <a href="oera_stream.html" class="nav_stream">Live Streams</a>
+        <a href="oera_forum.html" class="nav_forum">Forum</a>
+        <form action="" class="nav_search bar" style="position: relative; left: 50px;">
+            <input type="text">
+        </form>
+        <div class="nav_account" style="position: relative; bottom: 50px; right: 150px;">My Account</div>
+    </div>
+
+    <div class="exhibition">
+        <div class="exhi_music">
+            <h1 id="title" style="position: relative; right: 18px;">Music</h1>
+
+            <!-- 第一个音频播放器 -->
+            <div class="audio-player">
+                <img id="album-cover" src="./Album Cover/Hiraeth.png" alt="Album Cover" class="album-cover" style="width: 300px;">
+                <div class="information" style="display: inline-block; margin-left: 5%; width: 600px;position: relative;bottom: 25px;">
+                    <h2 id="song-title" style="font-size: xx-large;">Hiraeth</h2>
+                    <p id="album-name" style="font-size: larger;margin: 5px 0px;">Hiraeth</p>
+                    <p id="artist-name" style="font-size: x-large;">OERA // Yu Ling</p>
+                    <div id="tags" style="margin-bottom: 10px;">
+                        <span style="display: inline-block; background-color: aliceblue; color: black; padding: 3px 6px; border-radius: 3px; margin-right: 5px; font-size: 15px;">Organic Retro</span>
+                        <span style="display: inline-block; background-color: aliceblue; color: black; padding: 3px 6px; border-radius: 3px; margin-right: 5px; font-size: 15px;">Chill</span>
+                        <span style="display: inline-block; background-color: aliceblue; color: black; padding: 3px 6px; border-radius: 3px; margin-right: 5px; font-size: 15px;">Acoustic</span>
+                    </div>
+                    <audio id="audio1" src="./Music/Hiraeth.wav" type="audio/wav" preload="auto"></audio>
+                    <button class="play-pause" style="position: relative;top: 10px;">Play</button>
+                    <input type="range" class="seek-bar" value="0" max="100" step="0.1" style="width: 100%; margin-top: 5%;">
+                </div>
+            </div>
+
+            <!-- 第二个音频播放器 -->
+            <div class="audio-player">
+                <img id="album-cover" src="./Album Cover/Hiraeth.png" alt="Album Cover" class="album-cover" style="width: 300px;">
+                <div class="information" style="display: inline-block; margin-left: 5%; width: 600px;position: relative;bottom: 25px;">
+                    <h2 id="song-title" style="font-size: xx-large;">Drowsy</h2>
+                    <p id="album-name" style="font-size: larger;margin: 5px 0px;">Hiraeth</p>
+                    <p id="artist-name" style="font-size: x-large;">OERA</p>
+                    <div id="tags" style="margin-bottom: 10px;">
+                        <span style="display: inline-block; background-color: aliceblue; color: black; padding: 3px 6px; border-radius: 3px; margin-right: 5px; font-size: 15px;">Lofi</span>
+                        <span style="display: inline-block; background-color: aliceblue; color: black; padding: 3px 6px; border-radius: 3px; margin-right: 5px; font-size: 15px;">Chill</span>
+                    </div>
+                    <audio id="audio2" src="./Music/Drowsy.wav" type="audio/wav" preload="auto"></audio>
+                    <button class="play-pause" style="position: relative;top: 10px;">Play</button>
+                    <input type="range" class="seek-bar" value="0" max="100" step="0.1" style="width: 100%; margin-top: 5%;">
+                </div>
+            </div>
+
+            <div class="audio-player">
+                <img id="album-cover" src="./Album Cover/Hiraeth.png" alt="Album Cover" class="album-cover" style="width: 300px;">
+                <div class="information" style="display: inline-block; margin-left: 5%; width: 600px;position: relative;bottom: 25px;">
+                    <h2 id="song-title" style="font-size: xx-large;">The Era When Brass Still Flows</h2>
+                    <p id="album-name" style="font-size: larger;margin: 5px 0px;">Hiraeth</p>
+                    <p id="artist-name" style="font-size: x-large;">OERA</p>
+                    <div id="tags" style="margin-bottom: 10px;">
+                        <span style="display: inline-block; background-color: aliceblue; color: black; padding: 3px 6px; border-radius: 3px; margin-right: 5px; font-size: 15px;">Vintage</span>
+                        <span style="display: inline-block; background-color: aliceblue; color: black; padding: 3px 6px; border-radius: 3px; margin-right: 5px; font-size: 15px;">Chill</span>
+                    </div>
+                    <audio id="audio3" src="./Music/The Era When Brass Still Flows.wav" type="audio/wav" preload="auto"></audio>
+                    <button class="play-pause" style="position: relative;top: 10px;">Play</button>
+                    <input type="range" class="seek-bar" value="0" max="100" step="0.1" style="width: 100%; margin-top: 5%;">
+                </div>
+            </div>
+
+            <div class="audio-player">
+                <img id="album-cover" src="./Album Cover/NIHIL2.jpg" alt="Album Cover" class="album-cover" style="width: 300px;">
+                <div class="information" style="display: inline-block; margin-left: 5%; width: 600px;position: relative;bottom: 25px;">
+                    <h2 id="song-title" style="font-size: xx-large;">Derelict Heart</h2>
+                    <p id="album-name" style="font-size: larger;margin: 5px 0px;">N I H I L 2024 Vol.2 (Released by YT Records)</p>
+                    <p id="artist-name" style="font-size: x-large;">OERA // YT Records</p>
+                    <div id="tags" style="margin-bottom: 10px;">
+                        <span style="display: inline-block; background-color: aliceblue; color: black; padding: 3px 6px; border-radius: 3px; margin-right: 5px; font-size: 15px;">Drum & Bass</span>
+                        <span style="display: inline-block; background-color: aliceblue; color: black; padding: 3px 6px; border-radius: 3px; margin-right: 5px; font-size: 15px;">Neuro Funk</span>
+                    </div>
+                    <audio id="audio4" src="./Music/Derelict Heart.wav" type="audio/wav" preload="auto"></audio>
+                    <button class="play-pause" style="position: relative;top: 10px;">Play</button>
+                    <input type="range" class="seek-bar" value="0" max="100" step="0.1" style="width: 100%; margin-top: 5%;">
+                </div>
+            </div>
+
+            <div class="audio-player">
+                <img id="album-cover" src="./Album Cover/Hiraeth.png" alt="Album Cover" class="album-cover" style="width: 300px;">
+                <div class="information" style="display: inline-block; margin-left: 5%; width: 600px;position: relative;bottom: 25px;">
+                    <h2 id="song-title" style="font-size: xx-large;">N O X F L A R E</h2>
+                    <p id="album-name" style="font-size: larger;margin: 5px 0px;">N O X F L A R E (Released by 2088 RECORDS)</p>
+                    <p id="artist-name" style="font-size: x-large;">OERA // 2088 RECORDS</p>
+                    <div id="tags" style="margin-bottom: 10px;">
+                        <span style="display: inline-block; background-color: aliceblue; color: black; padding: 3px 6px; border-radius: 3px; margin-right: 5px; font-size: 15px;">Dubstep</span>
+                        <span style="display: inline-block; background-color: aliceblue; color: black; padding: 3px 6px; border-radius: 3px; margin-right: 5px; font-size: 15px;">Bass House</span>
+                        <span style="display: inline-block; background-color: aliceblue; color: black; padding: 3px 6px; border-radius: 3px; margin-right: 5px; font-size: 15px;">Techno</span>
+                    </div>
+                    <audio id="audio5" src="./Music/Noxflare_48000_24.wav" type="audio/wav" preload="auto"></audio>
+                    <button class="play-pause" style="position: relative;top: 10px;">Play</button>
+                    <input type="range" class="seek-bar" value="0" max="100" step="0.1" style="width: 100%; margin-top: 5%;">
+                </div>
+            </div>
+
+            <div class="audio-player">
+                <img id="album-cover" src="./Album Cover/Cosmos.png" alt="Album Cover" class="album-cover" style="width: 300px;">
+                <div class="information" style="display: inline-block; margin-left: 5%; width: 600px;position: relative;bottom: 25px;">
+                    <h2 id="song-title" style="font-size: xx-large;">Gravitational lens</h2>
+                    <p id="album-name" style="font-size: larger;margin: 5px 0px;">Gravitational lens</p>
+                    <p id="artist-name" style="font-size: x-large;">OERA</p>
+                    <div id="tags" style="margin-bottom: 10px;">
+                        <span style="display: inline-block; background-color: aliceblue; color: black; padding: 3px 6px; border-radius: 3px; margin-right: 5px; font-size: 15px;">Cinematic</span>
+                        <span style="display: inline-block; background-color: aliceblue; color: black; padding: 3px 6px; border-radius: 3px; margin-right: 5px; font-size: 15px;">Cosmos</span>
+                        <span style="display: inline-block; background-color: aliceblue; color: black; padding: 3px 6px; border-radius: 3px; margin-right: 5px; font-size: 15px;">Sci-fi</span>
+                    </div>
+                    <audio id="audio6" src="./Music/Gravitational lens mastered_direct out.wav" type="audio/wav" preload="auto"></audio>
+                    <button class="play-pause" style="position: relative;top: 10px;">Play</button>
+                    <input type="range" class="seek-bar" value="0" max="100" step="0.1" style="width: 100%; margin-top: 5%;">
+                </div>
+            </div>
+
+        </div>
+        <div class="mask"></div>
+    </div>
+
+    <div class="background">
+        <img src="Logo.png" alt="Logo" style="height: 60%;margin-top: 15%;">
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const audioPlayers = document.querySelectorAll('.audio-player');
+
+            audioPlayers.forEach(player => {
+                const audio = player.querySelector('audio');
+                const playPauseButton = player.querySelector('.play-pause');
+                const seekBar = player.querySelector('.seek-bar');
+
+                playPauseButton.addEventListener('click', () => {
+                    // 暂停所有其他音频
+                    audioPlayers.forEach(otherPlayer => {
+                        const otherAudio = otherPlayer.querySelector('audio');
+                        if (otherAudio !== audio) {
+                            otherAudio.pause();
+                            otherPlayer.querySelector('.play-pause').textContent = 'Play';
+                        }
+                    });
+
+                    // 播放或暂停当前音频
+                    if (audio.paused) {
+                        audio.play();
+                        playPauseButton.textContent = 'Pause';
+                    } else {
+                        audio.pause();
+                        playPauseButton.textContent = 'Play';
+                    }
+                });
+
+                // 更新进度条
+                audio.addEventListener('timeupdate', () => {
+                    const currentTime = audio.currentTime;
+                    const duration = audio.duration;
+                    const progress = (currentTime / duration) * 100;
+                    seekBar.value = progress;
+                });
+
+                // 拖动进度条
+                seekBar.addEventListener('input', () => {
+                    const time = (seekBar.value / 100) * audio.duration;
+                    audio.currentTime = time;
+                });
+
+                // 音频结束时重置按钮
+                audio.addEventListener('ended', () => {
+                    playPauseButton.textContent = 'Play';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

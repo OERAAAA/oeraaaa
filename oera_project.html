@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oera_project</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .exhibition {
+            position: absolute;  
+            top: 400px;
+            height: fit-content;
+            border-radius: 8px;
+            width: 94%;
+            padding-left: 2%;
+            margin-top: 100px; /* Offset for the fixed navbar */
+        }
+        
+        .mask {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 42px;
+            bottom: 0;
+            background-color: rgba(83, 83, 83, 0.68);
+            z-index: -1;
+        }
+        .sample-pack {
+            display: inline-block;
+            width: 30%; /* 每个块元素宽度 */
+            margin: 1.5%; /* 块元素之间的间距 */
+            margin-top: 50px;
+            text-align: center;
+            color: white;
+            text-decoration: none; /* 去掉下划线 */
+
+        }
+
+        .packname{
+            color: white; /* 将文字颜色改为白色 */
+            text-decoration: none; /* 去掉下划线 */
+            font-size: x-large; /* 增大字体大小 */
+        }
+
+        .sample-pack img {
+            width: 100%; /* 封面图自适应宽度 */
+            border-radius: 4px;
+            margin-bottom: 13px;
+        }
+        #title {
+            color: #f5fb38;
+            font-family: 'Earth';
+            font-size: xx-large;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation">
+        <a href="index.html" class="nav_home">Home</a>
+        <a href="oera_music.html" class="nav_music">Music</a>
+        <a href="oera_sample.html" class="nav_sample">Sample Packs</a>
+        <div class="nav_home" style="background-color: #f5fb38; color: black;font-family: 'Earth';height: 60px;">
+            <span style="position: relative;top: 50%;">Project Files</span>
+        </div>
+        <a href="oera_tutorial.html" class="nav_tutorial">Tutorials</a>
+        <a href="oera_stream.html" class="nav_stream">Live Streams</a>
+        <a href="oera_forum.html" class="nav_forum">Forum</a>
+        <form action="" class="nav_search bar" style="position: relative; left: 50px;">
+            <input type="text">
+        </form>
+        <div class="nav_account" style="position: relative; bottom: 50px; right: 150px;">My Account</div>
+    </div>
+    <div class="exhibition">
+        <h1 id="title" style="position: relative; right: 18px;">Project Files</h1>
+        <div class="sample-pack">
+            <a href="Glens_project.html" style="text-decoration: none;">
+                <img src="./Projectfiles/Glens/下载 (11).jpg" alt="Sample Pack 1" style="width: 70%;object-fit: cover;aspect-ratio: 2/3;">           
+                <div class="packname">Gravitational lens</div>
+            </a>
+        </div>
+
+        <div class="sample-pack">
+            <a href="sample_pack_1.html" style="text-decoration: none;">
+                <img src="./Projectfiles/Glens/下载 (9).jpg" alt="Sample Pack 1" style="width: 70%;object-fit: cover;">           
+                <div class="packname">N O X F L A R E(Coming Soon)</div>
+            </a>
+        </div>
+
+        <div class="sample-pack">
+            <a href="sample_pack_1.html" style="text-decoration: none;">
+                <img src="./Projectfiles/Glens/下载 (8).jpg" alt="Sample Pack 1" style="width: 70%;object-fit: cover;">           
+                <div class="packname">Derelict Heart(Coming Soon)</div>
+            </a>
+        </div>
+
+        <div class="sample-pack">
+            <a href="sample_pack_1.html" style="text-decoration: none;">
+                <img src="./Projectfiles/Glens/下载 (12).jpg" alt="Sample Pack 1" style="width: 70%;object-fit: cover;">           
+                <div class="packname">Tectogene(Coming Soon)</div>
+            </a>
+        </div>
+
+        <div class="sample-pack">
+            <a href="sample_pack_1.html" style="text-decoration: none;">
+                <img src="./Projectfiles/Glens/下载 (13).jpg" alt="Sample Pack 1" style="width: 70%;object-fit: cover;aspect-ratio: 2/3;">           
+                <div class="packname">Tachycardia(Coming Soon)</div>
+            </a>
+        </div>
+
+        <div class="sample-pack">
+            <a href="sample_pack_1.html" style="text-decoration: none;">
+                <img src="./Projectfiles/Glens/下载 (14).jpg" alt="Sample Pack 1" style="width: 70%;object-fit: cover;aspect-ratio: 2/3;">           
+                <div class="packname">Hiraeth(Coming Soon)</div>
+            </a>
+        </div>
+
+        <div class="mask"></div>
+    </div>
+
+    <div class="background">
+        <img src="Logo.png" alt="Logo" style="height: 60%;margin-top: 15%;">
+    </div>
+    
+</body>
+</html>
