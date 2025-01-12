@@ -13,14 +13,14 @@ h1{
 
 @font-face {
     font-family: 'Eurostile';
-    src: url('fonts/Eurostile.ttf') format('truetype');
+    src: url('../fonts/Eurostile.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Earth';
-    src: url('fonts/Earth.ttf') format('truetype');
+    src: url('../fonts/Earth.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
