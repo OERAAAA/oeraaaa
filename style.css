@@ -11,17 +11,18 @@ h1{
     font-family: 'Earth';
 }
 
-@font-face{
+@font-face {
     font-family: 'Eurostile';
-    src: local('Eurostile'), url('fonts/Eurostile.ttf') format('ttf');
+    src: url('fonts/Eurostile.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+}
 
+@font-face {
     font-family: 'Earth';
-    src: local('Earth'), url('fonts/Earth.ttf') format('ttf');
+    src: url('fonts/Earth.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-
 }
 
 .navigation {
