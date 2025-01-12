@@ -13,14 +13,16 @@ h1{
 
 @font-face {
     font-family: 'Eurostile';
-    src: url('../oeraaaa/fonts/Eurostile.ttf') format('truetype');
+    src: url('../oeraaaa/fonts/Eurostile.woff2') format('woff2'),
+        url('../oeraaaa/fonts/Eurostile.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Earth';
-    src: url('../oeraaaa/fonts/Earth.ttf') format('truetype');
+    src: url('../oeraaaa/fonts/Earth.woff2') format('woff2'),
+        url('../oeraaaa/fonts/Earth.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
